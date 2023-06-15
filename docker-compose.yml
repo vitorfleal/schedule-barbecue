@@ -1,0 +1,80 @@
+version: '1.0'
+
+services:
+      
+  mssql:
+    container_name: barbecue-db
+    image: "mcr.microsoft.com/mssql/server"
+    environment:
+      SA_PASSWORD: "Develop@123"
+      ACCEPT_EULA: "Y"
+    ports:
+      - 5434:1433
+          
+  migrations:
+    container_name: barbecue-migrations
+    env_file:
+      - .env
+    build:
+      context: .
+      dockerfile: Dockerfile.local
+    volumes:
+      - .:/app
+    depends_on:
+      - mssql
+    command:
+      [
+        "/app/scripts/wait-for-it.sh",
+        "mssql:1433",
+        "-t",
+        "60",
+        "--",
+        "/app/scripts/apply-migrations.sh",
+      ]
+
+  run-tests:
+    container_name: barbecue-integration-tests
+    build:
+      context: .
+      dockerfile: src/ScheduleBarbecue.Api/Dockerfile.local
+    volumes:
+      - .:/app
+    depends_on:
+      - mssql
+      - migrations
+    env_file:
+      - .env
+    command:
+      [
+        "/app/scripts/wait-for-it.sh",
+        "mssql:1433",
+        "-t",
+        "60",
+        "--",
+        "/app/scripts/start-tests.sh"
+      ]
+      
+  api:
+    container_name: barbecue-api
+    build:
+      context: .
+      dockerfile: src/ScheduleBarbecue.Api/Dockerfile.local
+    volumes:
+      - .:/app
+      - ${USERPROFILE}\.aspnet\https:/https/
+    env_file:
+      - .env
+    depends_on:
+      - mssql
+    command:
+      [
+        "/app/scripts/wait-for-it.sh",
+        "mssql:1433",
+        "-t",
+        "60",
+        "--",
+        "/app/scripts/start-development.sh"
+      ]
+    ports:
+      - 5000:5000
+      - 5001:5001

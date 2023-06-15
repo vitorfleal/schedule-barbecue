@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{66C9948B-6D8A-47CF-A92A-34C87A84D222}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScheduleBarbecue.Application", "src\ScheduleBarbecue.Application\ScheduleBarbecue.Application.csproj", "{837F229E-525D-49BE-B885-115F3D62BE27}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScheduleBarbecue.Infrastructure", "src\ScheduleBarbecue.Infrastructure\ScheduleBarbecue.Infrastructure.csproj", "{3DF7E450-678C-47BB-8849-BA3DEFD72C4C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScheduleBarbecue.Api", "src\ScheduleBarbecue.Api\ScheduleBarbecue.Api.csproj", "{8F14D6BB-5506-49DF-B713-07C07AB8A3FB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{1A97BE56-6EF0-4354-B1F2-BF886A5A22BF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScheduleBarbecue.Tests", "tests\ScheduleBarbecue.Tests\ScheduleBarbecue.Tests.csproj", "{29D7BEEE-289A-4932-9612-B3EE048A504E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{837F229E-525D-49BE-B885-115F3D62BE27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{837F229E-525D-49BE-B885-115F3D62BE27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{837F229E-525D-49BE-B885-115F3D62BE27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{837F229E-525D-49BE-B885-115F3D62BE27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DF7E450-678C-47BB-8849-BA3DEFD72C4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DF7E450-678C-47BB-8849-BA3DEFD72C4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DF7E450-678C-47BB-8849-BA3DEFD72C4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DF7E450-678C-47BB-8849-BA3DEFD72C4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F14D6BB-5506-49DF-B713-07C07AB8A3FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F14D6BB-5506-49DF-B713-07C07AB8A3FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F14D6BB-5506-49DF-B713-07C07AB8A3FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F14D6BB-5506-49DF-B713-07C07AB8A3FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29D7BEEE-289A-4932-9612-B3EE048A504E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29D7BEEE-289A-4932-9612-B3EE048A504E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29D7BEEE-289A-4932-9612-B3EE048A504E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29D7BEEE-289A-4932-9612-B3EE048A504E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{837F229E-525D-49BE-B885-115F3D62BE27} = {66C9948B-6D8A-47CF-A92A-34C87A84D222}
+		{3DF7E450-678C-47BB-8849-BA3DEFD72C4C} = {66C9948B-6D8A-47CF-A92A-34C87A84D222}
+		{8F14D6BB-5506-49DF-B713-07C07AB8A3FB} = {66C9948B-6D8A-47CF-A92A-34C87A84D222}
+		{29D7BEEE-289A-4932-9612-B3EE048A504E} = {1A97BE56-6EF0-4354-B1F2-BF886A5A22BF}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EA856B24-4C94-4CD7-AC25-3A018F12E127}
+	EndGlobalSection
+EndGlobal

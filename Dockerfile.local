@@ -1,0 +1,10 @@
+ARG IMAGE_TAG=6.0
+
+FROM mcr.microsoft.com/dotnet/sdk:$IMAGE_TAG AS build
+
+# Install EF Core tools
+ENV PATH $PATH:/root/.dotnet/tools
+RUN dotnet tool install --global dotnet-ef --version 7.0.7
+
+WORKDIR /app
+COPY . ./
