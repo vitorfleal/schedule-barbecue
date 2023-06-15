@@ -15,7 +15,7 @@ Este é um exemplo de projeto sobre como implementar uma API para agendamento e 
 
 ```bash
 # Create certificate  pfx - Necessário para rodar API no protocolo HTTPS no Docker
-dotnet dev-certs https --trust -ep $env:USERPROFILE\.aspnet\https\schedulebarbecueapp.pfx -p locahost
+dotnet dev-certs https --trust -ep $env:USERPROFILE\.aspnet\https\schedulebarbecueapp.pfx -p localhost
 
 # Run database - Download da imagem e criação do container do SQL Server
 docker compose up -d mssql
